@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="演繹動線設計有限公司｜住宅空間、老屋翻新與高端住宅設計，從動線規劃到設計施工一站完成。">
+<title>演繹動線設計有限公司｜空間設計・工程整合</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f4f1eb;--cream:#e9e3d9;--ink:#24221f;--muted:#777168;--brown:#655346;--line:rgba(45,40,34,.17);--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans TC","DM Sans",sans-serif;font-weight:300}a{color:inherit;text-decoration:none}button{font:inherit}.serif{font-family:"Playfair Display",Georgia,serif}.eyebrow{font:500 10px "DM Sans",sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.wrap{width:min(1240px,calc(100% - 9vw));margin:auto}
+header{height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;position:fixed;top:0;left:0;width:100%;z-index:50;color:#292722;background:rgba(255,255,255,.97);border-bottom:1px solid rgba(35,32,28,.08);box-shadow:0 2px 12px rgba(0,0,0,.045);backdrop-filter:blur(12px)}
+.brand{font:500 19px "DM Sans",sans-serif;letter-spacing:.16em;color:#34332d;white-space:nowrap}.brand small{display:block;font:300 9px "Noto Sans TC";letter-spacing:.22em;margin-top:4px;color:#777168}
+nav{display:flex;align-items:center;gap:clamp(14px,2.2vw,31px);font-size:13px;letter-spacing:.04em}nav a{opacity:.9;transition:.25s;white-space:nowrap}nav a:hover{opacity:1;color:#8a715c}.nav-line{padding:10px 16px;border:1px solid #8b7967;border-radius:2px;color:#5e5044}
+.menu{display:none;background:none;border:0;color:#292722;font-size:24px}
+.hero{min-height:760px;height:100vh;max-height:960px;padding-top:74px;position:relative;display:flex;align-items:flex-end;color:white;background:#62584d url("hero-living-room.png") center/cover no-repeat}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,18,16,.58),rgba(20,18,16,.12) 70%),linear-gradient(0deg,rgba(20,18,16,.35),transparent 60%)}
+.hero-content{position:relative;padding:0 9vw 12vh;max-width:900px}.hero .eyebrow{color:#e8dfd3}.hero h1{font:400 clamp(48px,7vw,92px)/1.06 "Playfair Display",serif;letter-spacing:.025em;margin:24px 0}.hero p{font-size:14px;line-height:2.1;letter-spacing:.1em;color:#f2eee8}.hero-cta{display:inline-flex;gap:24px;align-items:center;margin-top:28px;border-bottom:1px solid rgba(255,255,255,.7);padding:0 0 12px;font-size:12px;letter-spacing:.16em}
+.hero-index{position:absolute;right:5vw;bottom:6vh;font:12px "DM Sans";letter-spacing:.18em}
+section{padding:125px 0}.section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:58px}.section-head h2{font:400 clamp(36px,4vw,55px)/1.15 "Playfair Display",serif;margin:12px 0 0}.section-head p{max-width:350px;color:var(--muted);font-size:12px;line-height:2}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:10vw;align-items:center}.about-copy h2{font:400 clamp(35px,4vw,54px)/1.25 "Playfair Display",serif;margin:18px 0 28px}.about-copy p{font-size:14px;line-height:2.35;color:var(--muted);max-width:560px}.about-image{height:540px;background:url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85") center/cover}
+
+.portfolio{background:#eae5dc}.filters{display:flex;gap:24px;flex-wrap:wrap}.filter{border:0;background:none;padding:8px 0;color:var(--muted);font-size:11px;letter-spacing:.1em;cursor:pointer;border-bottom:1px solid transparent}.filter.active{color:var(--ink);border-color:var(--brown)}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:42px 22px}.project{cursor:pointer}.project.hidden{display:none}.project-img{height:330px;overflow:hidden;background:#d8d1c7}.project-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}.project:hover img{transform:scale(1.045)}.project-meta{display:flex;justify-content:space-between;align-items:center;margin-top:17px}.project-meta h3{font-size:14px;font-weight:400;margin:0 0 7px}.project-meta p{font-size:10px;color:var(--muted);margin:0;letter-spacing:.08em}.project-arrow{font:22px "DM Sans";color:var(--brown)}
+.services-text{background:#fff;padding:88px 0}.services-heading{text-align:center;font-size:25px;font-weight:600;letter-spacing:.04em;margin:0 0 38px;color:#171614}.services-list{margin:0;padding-left:28px;font-size:17px;line-height:2.05;color:#292722}.services-list li{padding-left:2px}
+.process{background:#292723;color:#f4f1eb}.process .eyebrow,.process .section-head p{color:#b9b0a5}.process-list{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}.process-item{border-top:1px solid #68635b;padding-top:22px}.process-item span{font:400 30px "Playfair Display";color:#b5a38f}.process-item h3{font-size:14px;font-weight:400;margin:20px 0 10px}.process-item p{font-size:11px;line-height:2;color:#b9b0a5}
+.awards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.award{padding:28px 22px;border:1px solid var(--line);min-height:150px}.award strong{font:400 26px "Playfair Display";display:block;color:var(--brown)}.award span{font-size:11px;line-height:1.8;color:var(--muted);display:block;margin-top:13px}
+.awards-text{background:#fff;padding:88px 0}.awards-heading{text-align:center;font-size:25px;font-weight:600;letter-spacing:.04em;margin:0 0 38px;color:#171614}.awards-intro{font-size:17px;line-height:2;color:#292722;margin:0 0 22px}.awards-list{margin:0;padding-left:28px;font-size:17px;line-height:2.05;color:#292722}.awards-list li{padding-left:2px}.contact{background:#e8e2d8}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:9vw}.contact h2{font:400 clamp(40px,5vw,65px)/1.1 "Playfair Display";margin:18px 0 25px}.contact-intro{font-size:13px;color:var(--muted);line-height:2}.line-main{display:inline-flex;align-items:center;gap:18px;background:#4e604e;color:white;padding:17px 27px;margin-top:24px;font-size:12px;letter-spacing:.1em;transition:.25s}.line-main:hover{background:#354635;transform:translateY(-2px)}.contact-social{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:30px;padding-top:20px;border-top:1px solid var(--line)}.contact-social span{font-size:11px;color:var(--muted);letter-spacing:.08em}.contact-social a{font-size:11px;color:var(--brown);border-bottom:1px solid var(--brown);padding-bottom:4px}.office{padding:20px 0;border-bottom:1px solid var(--line)}.office h3{font-size:13px;font-weight:500;margin:0 0 10px}.office p{font-size:12px;color:var(--muted);line-height:1.9;margin:0 0 12px}.map-links{display:flex;gap:18px;flex-wrap:wrap}.map-links a{font-size:11px;border-bottom:1px solid var(--brown);padding-bottom:4px;color:var(--brown)}
+.map-embed{height:260px;margin-top:14px;border:0;width:100%;filter:grayscale(.25)}
+footer{background:#24221f;color:#c9c1b7;padding:35px 5vw;text-align:center;font-size:10px;letter-spacing:.08em}
+.float-line{position:fixed;right:24px;bottom:24px;z-index:30;background:#4e604e;color:white;padding:14px 19px;border-radius:40px;font-size:12px;box-shadow:0 6px 24px #0002}
+.lightbox{position:fixed;inset:0;background:rgba(17,16,15,.96);z-index:100;display:none;align-items:center;justify-content:center;padding:35px}.lightbox.open{display:flex}.lightbox-inner{width:min(1100px,100%);display:grid;grid-template-columns:1fr 260px;gap:28px;align-items:center}.lightbox-main{position:relative;min-width:0}.lightbox-main img{width:100%;height:min(70vh,720px);object-fit:contain}.lightbox-info{color:#eee}.lightbox-info .eyebrow{color:#b5a38f}.lightbox-info h3{font:400 30px "Playfair Display";margin:15px 0}.lightbox-info p{font-size:12px;line-height:2;color:#bbb}.thumbs{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.thumbs img{width:62px;height:48px;object-fit:cover;opacity:.5;cursor:pointer;border:1px solid transparent}.thumbs img.active{opacity:1;border-color:#c7b49e}.lb-close,.lb-prev,.lb-next{position:absolute;border:0;background:rgba(255,255,255,.12);color:white;cursor:pointer}.lb-close{top:22px;right:25px;font-size:28px;background:none}.lb-prev,.lb-next{top:50%;transform:translateY(-50%);font-size:25px;width:45px;height:55px}.lb-prev{left:12px}.lb-next{right:12px}
+@media(max-width:850px){header{height:70px}.menu{display:block}nav{display:none;position:absolute;top:70px;left:0;width:100%;background:#fff;color:#292722;padding:25px 7vw;flex-direction:column;align-items:flex-start;box-shadow:0 8px 14px rgba(0,0,0,.08)}nav.open{display:flex}.hero{min-height:690px}.hero-content{padding:0 7vw 13vh}.about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}.about-image{height:400px}.projects{grid-template-columns:repeat(2,1fr)}.project-img{height:280px}.awards-grid{grid-template-columns:repeat(2,1fr)}.process-list{grid-template-columns:repeat(2,1fr)}.lightbox-inner{grid-template-columns:1fr}.lightbox-info{max-height:24vh;overflow:auto}.lightbox-main img{height:52vh}}
+@media(max-width:560px){.wrap{width:calc(100% - 40px)}section{padding:82px 0}.section-head{display:block;margin-bottom:35px}.section-head p{margin-top:18px}.hero{height:88vh;min-height:620px}.hero h1{font-size:54px}.hero p{font-size:12px}.projects{grid-template-columns:1fr;gap:30px}.project-img{height:290px}.services-grid{grid-template-columns:1fr}.process-list{grid-template-columns:1fr 1fr;gap:28px 16px}.awards-grid{grid-template-columns:1fr 1fr;gap:10px}.award{padding:20px 15px}.stats{gap:25px}.stat strong{font-size:30px}.lightbox{padding:16px}.lightbox-main img{height:45vh}.lb-prev{left:0}.lb-next{right:0}footer{display:block;line-height:2.4}.footer-social{margin-top:12px}}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#top">FLOW DESIGN<small>演繹動線設計有限公司</small></a>
+  <button class="menu" id="menuBtn" aria-label="開啟導覽選單">☰</button>
+  <nav id="nav">
+    <a href="#about">關於我們</a><a href="#portfolio">設計作品</a><a href="#services">服務項目</a><a href="#process">服務流程</a><a href="#awards">獲獎肯定</a><a href="#contact">聯絡我們</a>
+    <a class="nav-line" href="https://line.me/R/ti/p/@183slkij" target="_blank" rel="noopener">LINE 詢問 ↗</a>
+  </nav>
+</header>
+<main id="top">
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">室內設計・空間規劃・工程整合</div>
+    <h1>演繹空間，<br>設計生活。</h1>
+    <p>以空間為載體，梳理生活的節奏與動線。<br>從專業規劃、設計到施工，實現理想生活場景。</p>
+    <a class="hero-cta" href="#portfolio">瀏覽設計作品 <span>↗</span></a>
+  </div><div class="hero-index">01 / 06　—　演繹動線設計</div>
+</section>
+<section id="about"><div class="wrap about-grid">
+  <div class="about-copy">
+    <div class="eyebrow">關於我們</div>
+    <h2>Flow design</h2>
+    <p>演繹動線設計有限公司擁有超過 20 年室內設計經驗。<br>
+    從設計到工程是一條龍的服務。<br>
+    走進屬於您的日常動線，重組格局。<br>
+    讓美感與實用相融，量身打造最懂您的專屬空間。</p>
+  </div>
+  <div class="about-image" role="img" aria-label="現代住宅室內設計空間"></div>
+</div></section>
+<section class="portfolio" id="portfolio"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">02 — 精選作品</div><h2>精選設計作品</h2></div><div><p>每個作品，都是對生活方式的重新詮釋。點選作品即可瀏覽完整圖片。</p><div class="filters"><button class="filter active" data-filter="all">全部作品</button><button class="filter" data-filter="residential">住宅設計</button><button class="filter" data-filter="renovation">老屋翻新</button><button class="filter" data-filter="luxury">高端住宅</button><button class="filter" data-filter="commercial">商業空間</button></div></div></div>
+  <div class="projects" id="projects">
+    <article class="project" data-category="luxury" data-index="0"><div class="project-img"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85" alt="暖灰色現代住宅客廳"></div><div class="project-meta"><div><h3>光影之間</h3><p>高端住宅　／　台北</p></div><span class="project-arrow">↗</span></div></article>
+    <article class="project" data-category="renovation" data-index="1"><div class="project-img"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="現代老屋翻新空間"></div><div class="project-meta"><div><h3>留白日常</h3><p>老屋翻新　／　台北</p></div><span class="project-arrow">↗</span></div></article>
+    <article class="project" data-category="residential" data-index="2"><div class="project-img"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85" alt="現代住宅餐廳"></div><div class="project-meta"><div><h3>溫潤序曲</h3><p>新成屋　／　台中</p></div><span class="project-arrow">↗</span></div></article>
+    <article class="project" data-category="luxury" data-index="3"><div class="project-img"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="奢華住宅室內"></div><div class="project-meta"><div><h3>靜謐層次</h3><p>豪宅設計　／　台北</p></div><span class="project-arrow">↗</span></div></article>
+    <article class="project" data-category="commercial" data-index="4"><div class="project-img"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85" alt="商業空間設計"></div><div class="project-meta"><div><h3>場域之間</h3><p>商業空間　／　台中</p></div><span class="project-arrow">↗</span></div></article>
+    <article class="project" data-category="renovation" data-index="5"><div class="project-img"><img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85" alt="翻新住宅空間"></div><div class="project-meta"><div><h3>拾光寓所</h3><p>老屋翻新　／　新北</p></div><span class="project-arrow">↗</span></div></article>
+  </div>
+</div></section>
+<section id="services" class="services-text"><div class="wrap">
+  <div class="services-heading">【服務項目】</div>
+  <ul class="services-list">
+    <li>老屋翻新</li>
+    <li>新成屋／毛胚屋</li>
+    <li>自地自建</li>
+    <li>高端住宅／豪宅</li>
+    <li>接待中心</li>
+    <li>公設空間</li>
+    <li>樣品屋</li>
+    <li>實品屋</li>
+    <li>設計施工整合</li>
+  </ul>
+</div></section>
+<section class="process" id="process"><div class="wrap"><div class="section-head"><div><div class="eyebrow">04 — 服務流程</div><h2>從構想到實現</h2></div><p>清晰的溝通與階段管理，讓每一個設計決策都能逐步落實。</p></div>
+<div class="process-list"><div class="process-item"><span>01</span><h3>需求訪談</h3><p>了解居住者需求、生活習慣、預算與空間條件。</p></div><div class="process-item"><span>02</span><h3>規劃設計</h3><p>整合動線、格局、材質與設計方向，建立完整提案。</p></div><div class="process-item"><span>03</span><h3>工程施作</h3><p>依照設計內容安排施工與現場管理，掌握品質細節。</p></div><div class="process-item"><span>04</span><h3>完工交付</h3><p>完成細節確認與交付，讓設計真正融入日常生活。</p></div></div>
+</div></section>
+<section id="awards" class="awards-text"><div class="wrap">
+  <div class="awards-heading">【國際設計大獎認證】</div>
+  <p class="awards-intro">演繹動線設計以專業設計實力與完整的空間整合服務，持續追求兼具美感、機能與生活品質的作品，並獲得國際設計獎項肯定：</p>
+  <ul class="awards-list">
+    <li>榮獲 2026 MUSE Design Awards 銀獎（Silver Winner）</li>
+    <li>榮獲 2023 德國 iF 設計獎（iF Design Award）</li>
+    <li>榮獲 2022 美國 IDA 國際設計大獎（Honorable Mention）</li>
+    <li>榮獲 Built Design Award 設計獎項肯定</li>
+  </ul>
+</div></section>
+<section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">06 — 聯絡我們</div><h2>一起打造<br>理想空間。</h2><p class="contact-intro">正在規劃新家、老屋翻新或商業空間嗎？<br>歡迎先加入 LINE，與我們聊聊您的空間需求。</p><a class="line-main" href="https://line.me/R/ti/p/@183slkij" target="_blank" rel="noopener">加入 LINE 官方帳號・立即詢問 <span>↗</span></a><p class="contact-intro" style="font-size:11px;margin-top:18px">電子郵件：flowdesigneditor@gmail.com</p>
+    <div class="contact-social">
+      <span>追蹤我們</span>
+      <a href="https://www.facebook.com/flowdesigninc" target="_blank" rel="noopener">Facebook ↗</a>
+      <a href="https://www.instagram.com/flow_design_0301/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="https://www.threads.com/@flow_design_0301" target="_blank" rel="noopener">Threads ↗</a>
+    </div>
+  </div>
+<div>
+  <div class="office"><h3>台北總公司</h3><p>台北市松山區民生東路五段 69 巷 3 弄 8 號 1 樓</p><div class="map-links"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=台北市松山區民生東路五段69巷3弄8號1樓">Google Maps 導航 ↗</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=台北市松山區民生東路五段69巷3弄8號1樓">規劃路線 ↗</a></div><iframe class="map-embed" loading="lazy" title="台北總公司地圖" src="https://maps.google.com/maps?q=台北市松山區民生東路五段69巷3弄8號1樓&output=embed"></iframe></div>
+  <div class="office"><h3>台中分公司</h3><p>台中市西區明禮街 15 號</p><div class="map-links"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=台中市西區明禮街15號">Google Maps 導航 ↗</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=台中市西區明禮街15號">規劃路線 ↗</a></div><iframe class="map-embed" loading="lazy" title="台中分公司地圖" src="https://maps.google.com/maps?q=台中市西區明禮街15號&output=embed"></iframe></div>
+</div></div></section>
+</main>
+<footer><div>© 2026 演繹動線設計有限公司 FLOW DESIGN｜版權所有</div></footer>
+<a class="float-line" href="https://line.me/R/ti/p/@183slkij" target="_blank" rel="noopener">LINE 線上詢問 ↗</a>
+<div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="作品圖片預覽視窗"><button class="lb-close" id="lbClose" aria-label="關閉">×</button><div class="lightbox-inner"><div class="lightbox-main"><button class="lb-prev" id="lbPrev">‹</button><img id="lbImage" src="" alt="作品圖片"><button class="lb-next" id="lbNext">›</button></div><div class="lightbox-info"><div class="eyebrow">作品圖片預覽</div><h3 id="lbTitle"></h3><p id="lbDesc"></p><div class="thumbs" id="thumbs"></div><p style="font-size:10px;color:#8f8981">示意作品圖片，請替換為公司實際完工作品。</p></div></div></div>
+<script>
+const projectData=[
+ {title:"光影之間",meta:"高端住宅／台北",desc:"以自然光、石材與溫潤木質建立沉穩而開闊的生活場景。",images:["https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=90","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=90","https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=90"]},
+ {title:"留白日常",meta:"老屋翻新／台北",desc:"重新整理原有格局，讓收納、採光與生活動線回到舒適平衡。",images:["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=90","https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=90","https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1400&q=90"]},
+ {title:"溫潤序曲",meta:"新成屋／台中",desc:"透過材質層次與家具配置，創造簡潔且富有溫度的居家氛圍。",images:["https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=90","https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=90"]},
+ {title:"靜謐層次",meta:"豪宅設計／台北",desc:"以比例、光線與細節工藝呈現低調而完整的高端住宅質感。",images:["https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=90","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=90"]},
+ {title:"場域之間",meta:"商業空間／台中",desc:"以清晰動線與空間識別，回應品牌與使用者的體驗需求。",images:["https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=90","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=90"]},
+ {title:"拾光寓所",meta:"老屋翻新／新北",desc:"保留空間的生活記憶，並以新的機能配置迎接下一段日常。",images:["https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1400&q=90","https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=90"]}
+];
+const nav=document.getElementById("nav");
+document.getElementById("menuBtn").addEventListener("click",()=>nav.classList.toggle("open"));
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")));
+document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{
+ document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));btn.classList.add("active");
+ document.querySelectorAll(".project").forEach(card=>{card.classList.toggle("hidden",btn.dataset.filter!=="all"&&card.dataset.category!==btn.dataset.filter)});
+}));
+const lb=document.getElementById("lightbox"),lbImage=document.getElementById("lbImage"),lbTitle=document.getElementById("lbTitle"),lbDesc=document.getElementById("lbDesc"),thumbs=document.getElementById("thumbs");
+let currentProject=0,currentImage=0,touchX=0;
+function renderLightbox(){const p=projectData[currentProject];lbTitle.textContent=p.title;lbDesc.textContent=p.meta+"｜"+p.desc;lbImage.src=p.images[currentImage];thumbs.innerHTML="";
+ p.images.forEach((src,i)=>{const im=document.createElement("img");im.src=src;im.alt=p.title+" 圖片 "+(i+1);if(i===currentImage)im.classList.add("active");im.addEventListener("click",()=>{currentImage=i;renderLightbox()});thumbs.appendChild(im)});
+}
+function openLightbox(i){currentProject=i;currentImage=0;renderLightbox();lb.classList.add("open");document.body.style.overflow="hidden"}
+function closeLightbox(){lb.classList.remove("open");document.body.style.overflow=""}
+function moveImage(d){const p=projectData[currentProject];currentImage=(currentImage+d+p.images.length)%p.images.length;renderLightbox()}
+document.querySelectorAll(".project").forEach(card=>card.addEventListener("click",()=>openLightbox(Number(card.dataset.index))));
+document.getElementById("lbClose").addEventListener("click",closeLightbox);
+document.getElementById("lbPrev").addEventListener("click",()=>moveImage(-1));
+document.getElementById("lbNext").addEventListener("click",()=>moveImage(1));
+lb.addEventListener("click",e=>{if(e.target===lb)closeLightbox()});
+document.addEventListener("keydown",e=>{if(!lb.classList.contains("open"))return;if(e.key==="Escape")closeLightbox();if(e.key==="ArrowLeft")moveImage(-1);if(e.key==="ArrowRight")moveImage(1)});
+lb.addEventListener("touchstart",e=>touchX=e.changedTouches[0].screenX,{passive:true});
+lb.addEventListener("touchend",e=>{const dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>50)moveImage(dx<0?1:-1)},{passive:true});
+</script>
+</body>
+</html>
